@@ -18,8 +18,6 @@ logging.basicConfig(
 
 logger = logging.getLogger("bot")
 
-
-
 #Auth
 
 client = tweepy.Client(
@@ -29,7 +27,6 @@ client = tweepy.Client(
     access_token=os.environ["TWITTER_ACCESS_TOKEN"],
     access_token_secret=os.environ["TWITTER_ACCESS_TOKEN_SECRET"]
 )
-
 
 emojis = [
     "¯\\_(ツ)_/¯ BOAS FÉRIAS ESTUDANTE ¯\\_(ツ)_/¯",
@@ -45,14 +42,12 @@ emojis = [
     "(*≧▽≦) DALE!!!! (^∇^)"
 ]
 
-
 # Print iterations progress
 def printProgressBar (iteration, total, prefix = '(', suffix = ')', decimals = 1, length = 40, fill = '█', printEnd = "\r"):
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filledLength = int(length * iteration // total)
     bar = fill * filledLength + '-' * (length - filledLength)
     return("""\r{} |{}| {}% {}""".format(prefix, bar, percent, suffix, end = printEnd))
-
 
 # Código
 def tweet_remaining_days():
