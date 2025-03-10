@@ -54,11 +54,11 @@ def tweet_remaining_days():
     today = datetime.date.today()
         
     logger.info("Tweeting...")
-    initial_day = datetime.date(2024, 9, 2)
+    initial_day = datetime.date(2025, 3, 10)
 
-    vacation = datetime.date(2024, 12, 14)
+    vacation = datetime.date(2025, 7, 2)
 
-    nextperiod = datetime.date(2025, 2, 17)
+    nextperiod = datetime.date(2025, 8, 4)
     diffvacationdays = nextperiod - vacation
     vacationdays = diffvacationdays.days
 
